@@ -30,8 +30,8 @@ export const RESUME_DATA = {
       link: "https://www.linkedin.com/company/bithealth",
       date: "2024",
       descriptions: [
-        "Develop hospital management web app using react and node.js.",
-        "Integrate BPJS Kesehatan's service into the app.",
+        "Developed features for Hospita, hospital management web app using react and node.",
+        "Integrated BPJS Kesehatan's E-Klaim service into the app.",
       ],
     },
     {
@@ -40,9 +40,9 @@ export const RESUME_DATA = {
       link: "https://www.linkedin.com/company/vorta-siber-indonesia",
       date: "2022 – 2024",
       descriptions: [
-        "Develop several web and mobile apps using react and react-native.",
-        "Utilize face-recognition using 3rd party service into the apps.",
-        "Deploy and debug apps.",
+        "Developed several web and mobile apps using react and react-native.",
+        "Utilized face-recognition using 3rd party service into the apps.",
+        "Deployed and debugged apps.",
       ],
     },
   ],
@@ -64,7 +64,7 @@ export const RESUME_DATA = {
     },
     {
       name: "anshori.co",
-      link: "https://anshori.vercel.app",
+      link: "https://anshori.co",
       description: "My personal and portfolio website.",
       tags: ["React", "Next.js", "Typescript"],
       year: "2023",
