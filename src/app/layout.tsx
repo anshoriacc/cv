@@ -10,7 +10,8 @@ export const metadata: Metadata = {
     default: "Achmad Anshori – Software Engineer, Frontend.",
     template: "%s – Achmad Anshori",
   },
-  description: "a Software Engineer focused on Frontend.",
+  description:
+    "Achmad Anshori's minimal resume page. Built with nextjs. Ctrl+P to print.",
   openGraph: {
     type: "website",
     url: "https://anshori.co",
@@ -18,15 +19,18 @@ export const metadata: Metadata = {
       default: "Achmad Anshori – Software Engineer, Frontend.",
       template: "%s – Achmad Anshori",
     },
-    description: "a Software Engineer focused on Frontend.",
-    siteName: "Achmad Anshori",
+    images: "/192x192.png",
+    description:
+      "Achmad Anshori's minimal resume page. Built with nextjs. Ctrl+P to print.",
+    siteName: "Achmad Anshori' resume",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: {
       default: "Achmad Anshori – Software Engineer, Frontend.",
       template: "%s – Achmad Anshori",
     },
+    images: "/192x192.png",
   },
 };
 
