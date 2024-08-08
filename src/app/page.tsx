@@ -81,7 +81,7 @@ export default function Home() {
                   </h3>
                 </Link>
 
-                <span className="text-xs">{experience.date}</span>
+                <span>{experience.date}</span>
               </div>
 
               <p className="text-neutral-900">{experience.title}</p>
