@@ -23,26 +23,29 @@ export default function Home() {
 
         <p>{resumeData.description}</p>
 
-        <div className="flex items-center gap-1">
-          <FaGlobeAsia />
-          <p>{resumeData.location}</p>
+        <div className="grid sm:grid-cols-2 gap-2">
+          <div className="flex items-center gap-1">
+            <FaGlobeAsia />
+            <p>{resumeData.location}</p>
+          </div>
+
+          <Link
+            href={`mailto:${resumeData.email}`}
+            className="hover:underline underline-offset-4 flex items-center gap-1"
+          >
+            <FaEnvelope />
+            <span>{resumeData.email}</span>
+          </Link>
+
+          <Link
+            href={resumeData.website.url}
+            target="_blank"
+            className="hover:underline underline-offset-4 flex items-center gap-1"
+          >
+            <FaGlobe />
+            <span>{resumeData.website.name}</span>
+          </Link>
         </div>
-
-        <Link
-          href={`mailto:${resumeData.email}`}
-          className="hover:underline underline-offset-4 flex items-center gap-1"
-        >
-          <FaEnvelope />
-          <span>{resumeData.email}</span>
-        </Link>
-
-        <Link
-          href={resumeData.website.url}
-          className="hover:underline underline-offset-4 flex items-center gap-1"
-        >
-          <FaGlobe />
-          <span>{resumeData.website.name}</span>
-        </Link>
       </section>
 
       {/* skills */}
