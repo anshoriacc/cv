@@ -1,4 +1,4 @@
-import { FaGlobeAsia, FaEnvelope } from "react-icons/fa";
+import { FaGlobeAsia, FaEnvelope, FaGlobe } from "react-icons/fa";
 
 import { poppins } from "../lib/fonts";
 import { cn } from "../lib/utils";
@@ -35,6 +35,14 @@ export default function Home() {
           <FaEnvelope />
           <span>{resumeData.email}</span>
         </Link>
+
+        <Link
+          href={resumeData.website.url}
+          className="hover:underline underline-offset-4 flex items-center gap-1"
+        >
+          <FaGlobe />
+          <span>{resumeData.website.name}</span>
+        </Link>
       </section>
 
       {/* skills */}
@@ -70,7 +78,7 @@ export default function Home() {
                   </h3>
                 </Link>
 
-                <p>{experience.date}</p>
+                <span className="text-xs">{experience.date}</span>
               </div>
 
               <p className="text-neutral-900">{experience.title}</p>
