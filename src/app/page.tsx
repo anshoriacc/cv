@@ -1,4 +1,4 @@
-import { FaGlobeAsia, FaEnvelope } from "react-icons/fa";
+import { FaGlobeAsia, FaEnvelope, FaGlobe } from "react-icons/fa";
 
 import { poppins } from "../lib/fonts";
 import { cn } from "../lib/utils";
@@ -23,18 +23,29 @@ export default function Home() {
 
         <p>{resumeData.description}</p>
 
-        <div className="flex items-center gap-1">
-          <FaGlobeAsia />
-          <p>{resumeData.location}</p>
-        </div>
+        <div className="grid sm:grid-cols-2 gap-2">
+          <div className="flex items-center gap-1">
+            <FaGlobeAsia />
+            <p>{resumeData.location}</p>
+          </div>
 
-        <Link
-          href={`mailto:${resumeData.email}`}
-          className="hover:underline underline-offset-4 flex items-center gap-1"
-        >
-          <FaEnvelope />
-          <span>{resumeData.email}</span>
-        </Link>
+          <Link
+            href={`mailto:${resumeData.email}`}
+            className="hover:underline underline-offset-4 flex items-center gap-1"
+          >
+            <FaEnvelope />
+            <span>{resumeData.email}</span>
+          </Link>
+
+          <Link
+            href={resumeData.website.url}
+            target="_blank"
+            className="hover:underline underline-offset-4 flex items-center gap-1"
+          >
+            <FaGlobe />
+            <span>{resumeData.website.name}</span>
+          </Link>
+        </div>
       </section>
 
       {/* skills */}
@@ -70,7 +81,7 @@ export default function Home() {
                   </h3>
                 </Link>
 
-                <p>{experience.date}</p>
+                <span>{experience.date}</span>
               </div>
 
               <p className="text-neutral-900">{experience.title}</p>

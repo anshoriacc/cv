@@ -5,6 +5,7 @@ export const RESUME_DATA = {
   title: "Software Engineer, Frontend.",
   location: "Jakarta, Indonesia",
   email: "anshoriacc@gmail.com",
+  website: { url: "https://anshori.co", name: "anshori.co" },
   social: [
     {
       name: "LinkedIn",
@@ -18,7 +19,7 @@ export const RESUME_DATA = {
   skills: [
     "Javascript",
     "Typescript",
-    "React",
+    "React.js",
     "Next.js",
     "React-Native",
     "Node.js",
@@ -28,7 +29,7 @@ export const RESUME_DATA = {
       title: "Software Engineer",
       company: "Bithealth",
       link: "https://www.linkedin.com/company/bithealth",
-      date: "2024",
+      date: "Mar 2024 – Present",
       descriptions: [
         "Developed features for Hospita, hospital management web app using react and node.",
         "Integrated BPJS Kesehatan's E-Klaim service into the app.",
@@ -38,7 +39,7 @@ export const RESUME_DATA = {
       title: "Software Engineer",
       company: "Vorta Siber Indonesia",
       link: "https://www.linkedin.com/company/vorta-siber-indonesia",
-      date: "2022 – 2024",
+      date: "Jun 2022 – Mar 2024",
       descriptions: [
         "Developed several web and mobile apps using react and react-native.",
         "Utilized face-recognition using 3rd party service into the apps.",
