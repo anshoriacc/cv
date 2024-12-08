@@ -37,4 +37,3 @@ jobs:
             docker stop cv-anshori || true
             docker rm cv-anshori || true
             docker run -d --name cv-anshori -p 3001:3000 cv-anshori:latest
-EOF
