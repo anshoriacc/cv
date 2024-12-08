@@ -26,10 +26,10 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_PASSWORD}}
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest .
+        run: docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/${{ github.event.repository.name }}:latest .
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
+        run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/${{ github.event.repository.name }}:latest
 
       - name: Deploy to VPS
         env:
@@ -43,7 +43,7 @@ jobs:
           scp -i key.pem -o StrictHostKeyChecking=no Dockerfile ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/home/${{ secrets.VPS_USER }}/deploy/cv/
           ssh -i key.pem -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
             cd /home/${{ secrets.VPS_USER }}/deploy/cv
-            docker build -t cv-anshori:latest .
-            docker stop cv-anshori || true
-            docker rm cv-anshori || true
-            docker run -d --name cv-anshori -p 3001:3000 cv-anshori:latest
+            docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/${{ github.event.repository.name }}:latest
+            docker stop ${{ github.event.repository.name }} || true
+            docker rm ${{ github.event.repository.name }} || true
+            docker run -d --name ${{ github.event.repository.name }} -p 3001:3000 ${{ secrets.DOCKER_HUB_USERNAME }}/${{ github.event.repository.name }}:latest
