@@ -1,7 +1,7 @@
 export const RESUME_DATA = {
   name: "Achmad Anshori",
   description:
-    "a Software Engineer focused on frontend side with 2 years of hands on experience across several projects.",
+    "a Software Engineer focused on frontend side with 3 years of hands on experience across several projects.",
   title: "Software Engineer, Frontend.",
   location: "Jakarta, Indonesia",
   email: "anshoriacc@gmail.com",
