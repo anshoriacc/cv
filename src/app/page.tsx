@@ -84,7 +84,15 @@ export default function Home() {
                 <span>{experience.date}</span>
               </div>
 
-              <p className="text-neutral-900">{experience.title}</p>
+              <p className="text-neutral-900">
+                {experience.title}{" "}
+                {experience.type && (
+                  <span>
+                    -{" "}
+                    <span className="text-neutral-500">{experience.type}</span>
+                  </span>
+                )}
+              </p>
 
               {experience.descriptions && (
                 <ul>

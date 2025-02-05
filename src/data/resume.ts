@@ -27,6 +27,7 @@ export const RESUME_DATA = {
   experiences: [
     {
       title: "Software Engineer",
+      type: "Fulltime",
       company: "Bithealth",
       link: "https://www.linkedin.com/company/bithealth",
       date: "Mar 2024 – Present",
@@ -36,7 +37,20 @@ export const RESUME_DATA = {
       ],
     },
     {
+      title: "Frontend Engineer",
+      type: "Freelance",
+      company: "Sentra Raya Solusi",
+      link: "#",
+      date: "Jul 2024 – Feb 2025",
+      descriptions: [
+        "Developed audit trail record dashboard for Tugu Insurance.",
+        "Developed audit trail record dashboard for BSI.",
+        "Contributed in super apps Satu SDM Polri.",
+      ],
+    },
+    {
       title: "Software Engineer",
+      type: "Fulltime",
       company: "Vorta Siber Indonesia",
       link: "https://www.linkedin.com/company/vorta-siber-indonesia",
       date: "Jun 2022 – Mar 2024",
