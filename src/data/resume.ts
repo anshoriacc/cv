@@ -45,7 +45,6 @@ export const RESUME_DATA = {
       descriptions: [
         "Developed audit trail record dashboard for Tugu Insurance.",
         "Developed audit trail record dashboard for BSI.",
-        "Contributed in super apps Satu SDM Polri.",
       ],
     },
     {
