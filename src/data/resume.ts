@@ -5,7 +5,7 @@ export const RESUME_DATA = {
   title: "Software Engineer, Frontend.",
   location: "Jakarta, Indonesia",
   email: "anshoriacc@gmail.com",
-  website: { url: "https://anshori.co", name: "anshori.co" },
+  website: { url: "https://anshori.com", name: "anshori.com" },
   social: [
     {
       name: "LinkedIn",
@@ -77,8 +77,8 @@ export const RESUME_DATA = {
       year: "2024",
     },
     {
-      name: "anshori.co",
-      link: "https://anshori.co",
+      name: "anshori.com",
+      link: "https://anshori.com",
       description: "My personal and portfolio website.",
       tags: ["React", "Next.js", "Typescript"],
       year: "2023",
