@@ -39,7 +39,7 @@ export const RESUME_V2 = {
     {
       field: "Collaboration",
       content:
-        "Stakeholder communication, vendor management, documentation & reporting.",
+        "Stakeholder communication, documentation & reporting.",
     },
   ],
   experiences: [
