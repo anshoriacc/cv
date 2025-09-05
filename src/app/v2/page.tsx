@@ -1,5 +1,5 @@
-import { FaGlobeAsia, FaEnvelope, FaGlobe } from "react-icons/fa";
 import Link from "next/link";
+import { FaGlobeAsia, FaEnvelope, FaGlobe } from "react-icons/fa";
 
 import { cn } from "@/lib/utils";
 import { poppins } from "@/lib/fonts";
