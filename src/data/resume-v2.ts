@@ -43,12 +43,22 @@ export const RESUME_V2 = {
     },
   ],
   experiences: [
+        {
+      title: "Software Engineer",
+      type: "Fulltime",
+      company: "Travelio",
+      link: "https://www.linkedin.com/company/travelio-com",
+      date: "Dec 2025 – Present",
+      descriptions: [
+        "Developed features for Travelio, online home rental operator web app.",
+      ],
+    },
     {
       title: "Software Engineer",
       type: "Fulltime",
       company: "Bithealth",
       link: "https://www.linkedin.com/company/bithealth",
-      date: "Mar 2024 – Present",
+      date: "Mar 2024 – Nov 2025",
       descriptions: [
         "Developed features for Hospita, a hospital management web app, ensuring stable and compliant IT service delivery.",
         "Integrated BPJS Kesehatan's E-Klaim service into Hospita.",

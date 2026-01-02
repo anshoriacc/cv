@@ -1,9 +1,9 @@
+import Link from "next/link";
 import { FaGlobeAsia, FaEnvelope, FaGlobe } from "react-icons/fa";
 
+import { RESUME_DATA } from "@/data/resume";
 import { poppins } from "../lib/fonts";
 import { cn } from "../lib/utils";
-import { RESUME_DATA } from "@/data/resume";
-import Link from "next/link";
 
 const resumeData = RESUME_DATA;
 
@@ -73,7 +73,7 @@ export default function Home() {
 
         <ul className="flex flex-col gap-2">
           {resumeData.experiences.map((experience, index) => (
-            <li key={index}>
+            <li key={index} className="flex flex-col gap-1">
               <div className="flex justify-between gap-4 items-center">
                 <Link href={experience.link} target="_blank">
                   <h3 className="font-semibold text-neutral-900 text-base hover:underline underline-offset-4">
@@ -95,7 +95,7 @@ export default function Home() {
               </p>
 
               {experience.descriptions && (
-                <ul>
+                <ul className="space-y-0.5">
                   {experience.descriptions.map((description, index) => (
                     <li
                       key={index}
@@ -136,13 +136,16 @@ export default function Home() {
       <section>
         <h2 className={cn(poppins.className)}>Projects</h2>
 
-        <div className="grid xs:grid-cols-2 gap-4">
+        <div className="grid gap-2">
           {resumeData.projects.map((project, index) => (
             <div
               key={index}
-              className="rounded-md border border-neutral-200 p-4 flex flex-col gap-4 justify-between"
+              className={cn(
+                "rounded-md border border-neutral-200 p-3 flex flex-col gap-2 justify-between",
+                "print:p-0 print:border-0 print:gap-0"
+              )}
             >
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-1">
                 {project.link ? (
                   <Link href={project.link} target="_blank">
                     <h3 className="font-semibold text-neutral-900 text-base hover:underline underline-offset-4">
@@ -159,6 +162,10 @@ export default function Home() {
               </div>
 
               <div className="flex gap-2 flex-wrap">
+                {project.tags.length > 0 && (
+                  <span className="hidden print:inline">Stack: </span>
+                )}
+
                 {project.tags.map((tag, index) => (
                   <span
                     key={index}
