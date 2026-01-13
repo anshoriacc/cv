@@ -1,4 +1,4 @@
-FROM node:alpine AS base
+FROM node:24-alpine AS base
 
 # Stage 1: Install dependencies
 FROM base AS deps
@@ -31,7 +31,7 @@ RUN \
 FROM base AS runner
 WORKDIR /app
 
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
