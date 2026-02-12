@@ -6,7 +6,7 @@ import { cn } from "../lib/utils";
 import { robotoMono } from "../lib/fonts";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://anshori.co"),
+  metadataBase: new URL("https://anshori.com"),
   title: {
     default: "Achmad Anshori – Software Engineer, Frontend.",
     template: "%s – Achmad Anshori",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "Achmad Anshori's minimal resume page. Built with nextjs. Ctrl+P to print.",
   openGraph: {
     type: "website",
-    url: "https://anshori.co",
+    url: "https://anshori.com",
     title: {
       default: "Achmad Anshori – Software Engineer, Frontend.",
       template: "%s – Achmad Anshori",
