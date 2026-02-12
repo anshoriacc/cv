@@ -19,6 +19,7 @@ FROM base AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
+ENV HOSTNAME="0.0.0.0"
 
 # Install curl for Coolify health checks and dumb-init for signal handling
 RUN apk add --no-cache curl dumb-init
