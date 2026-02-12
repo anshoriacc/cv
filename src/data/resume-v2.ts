@@ -1,7 +1,7 @@
 export const RESUME_V2 = {
   name: "Achmad Anshori",
   description:
-    "Software Engineer with 3 years of experience delivering reliable technology solutions in various fields such as healthcare, government, and corporate environments. Experienced in collaborating with cross-functional teams to define and implement innovative solutions.",
+    "Software Engineer with 4 years of experience delivering reliable technology solutions in various fields such as healthcare, government, and corporate environments. Experienced in collaborating with cross-functional teams to define and implement innovative solutions.",
   title: "Software Engineer.",
   location: "Jakarta, Indonesia",
   email: "anshoriacc@gmail.com",

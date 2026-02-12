@@ -1,7 +1,7 @@
 export const RESUME_DATA = {
   name: "Achmad Anshori",
   description:
-    "a Software Engineer focused on frontend side with 3 years of hands on experience. I craft delightful user experiences with React and modern JavaScript.",
+    "I'm a software engineer with 4 years of experience in software engineering. I craft delightful user experiences with React and modern JavaScript.",
   title: "Software Engineer, Frontend.",
   location: "Jakarta, Indonesia",
   email: "anshoriacc@gmail.com",
@@ -32,7 +32,7 @@ export const RESUME_DATA = {
       link: "https://www.linkedin.com/company/travelio-com",
       date: "Dec 2025 – Present",
       descriptions: [
-        "Developed features for Travelio, online home rental operator web app.",
+        "Developed features for Travelio, online property rental operator web app.",
       ],
     },
     {
