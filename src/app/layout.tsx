@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 
 import "./globals.css";
 import { cn } from "../lib/utils";
@@ -49,6 +50,12 @@ export default function RootLayout({
       >
         {children}
       </body>
+
+      <Script
+        defer
+        src="https://umami.anshori.com/script.js"
+        data-website-id="db69b964-16b0-47b7-afea-c93be6e6a9cc"
+      />
     </html>
   );
 }
