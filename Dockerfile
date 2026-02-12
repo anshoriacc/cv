@@ -20,10 +20,20 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
+# Install curl for Coolify health checks and dumb-init for signal handling
+RUN apk add --no-cache curl dumb-init
+
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nextjs -u 1001
+
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+USER nextjs
 
 EXPOSE 3000
 
+# Use dumb-init to handle signals properly
+ENTRYPOINT ["dumb-init", "--"]
 CMD ["node", "server.js"]
