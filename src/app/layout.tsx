@@ -6,7 +6,6 @@ import { cn } from "../lib/utils";
 import { robotoMono } from "../lib/fonts";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://anshori.com"),
   title: {
     default: "Achmad Anshori – Software Engineer, Frontend.",
     template: "%s – Achmad Anshori",
