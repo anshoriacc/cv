@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       default: "Achmad Anshori – Software Engineer, Frontend.",
       template: "%s – Achmad Anshori",
     },
-    images: "/192x192.png",
+    images: "/white192.png",
     description:
       "Achmad Anshori's minimal resume page. Built with nextjs. Ctrl+P to print.",
     siteName: "Achmad Anshori' resume",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       default: "Achmad Anshori – Software Engineer, Frontend.",
       template: "%s – Achmad Anshori",
     },
-    images: "/192x192.png",
+    images: "/white192.png",
   },
 };
 
