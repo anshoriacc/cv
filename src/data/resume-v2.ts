@@ -48,7 +48,7 @@ export const RESUME_V2 = {
       type: "Fulltime",
       company: "Travelio",
       link: "https://www.linkedin.com/company/travelio-com",
-      date: "Dec 2025 – Present",
+      date: "Dec 2025 – Mar 2026",
       descriptions: [
         "Developed features for Travelio, online home rental operator web app.",
       ],
