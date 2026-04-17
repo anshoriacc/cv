@@ -26,11 +26,22 @@ export const RESUME_DATA = {
   ],
   experiences: [
     {
+      title: "Frontend Engineer",
+      type: "Freelance",
+      company: "Sentra Raya Solusi",
+      link: "#",
+      date: "Jul 2024 - April 2026",
+      descriptions: [
+        "Developed audit trail record dashboard for Tugu Insurance and BSI for compliance monitoring.",
+        "Deployed and debugged apps.",
+      ],
+    },
+    {
       title: "Software Engineer",
       type: "Fulltime",
       company: "Travelio",
       link: "https://www.linkedin.com/company/travelio-com",
-      date: "Dec 2025 – Mar 2026",
+      date: "Dec 2025 - Mar 2026",
       descriptions: [
         "Developed features for Travelio, online property rental operator web app.",
       ],
@@ -40,7 +51,7 @@ export const RESUME_DATA = {
       type: "Fulltime",
       company: "Bithealth",
       link: "https://www.linkedin.com/company/bithealth",
-      date: "Mar 2024 – Nov 2025",
+      date: "Mar 2024 - Nov 2025",
       descriptions: [
         "Developed features for Hospita, hospital management web app using react and node.",
         "Integrated BPJS Kesehatan's E-Klaim service into the app.",
@@ -49,22 +60,11 @@ export const RESUME_DATA = {
       ],
     },
     {
-      title: "Frontend Engineer",
-      type: "Freelance",
-      company: "Sentra Raya Solusi",
-      link: "#",
-      date: "Jul 2024 – Jul 2025",
-      descriptions: [
-        "Developed audit trail record dashboard for Tugu Insurance and BSI for compliance monitoring.",
-        "Deployed and debugged apps.",
-      ],
-    },
-    {
       title: "Software Engineer",
       type: "Fulltime",
       company: "Vorta Siber Indonesia",
       link: "https://www.linkedin.com/company/vorta-siber-indonesia",
-      date: "Jun 2022 – Mar 2024",
+      date: "Jun 2022 - Mar 2024",
       descriptions: [
         "Developed several web and mobile apps using react and react-native.",
         "Utilized face-recognition using 3rd party service into the apps.",
@@ -77,7 +77,7 @@ export const RESUME_DATA = {
     {
       title: "Bachelor degree in Computer Science",
       university: "Brawijaya University",
-      date: "2016 – 2023",
+      date: "2016 - 2023",
     },
   ],
   projects: [
@@ -107,7 +107,8 @@ export const RESUME_DATA = {
     {
       name: "G19 Tour & Travel",
       link: "",
-      description: "Reservation web application for G19 Tour & Travel. Built for final thesis project.",
+      description:
+        "Reservation web application for G19 Tour & Travel. Built for final thesis project.",
       tags: ["React", "Next.js", "Typescript", "Node.js"],
       year: "2023",
     },

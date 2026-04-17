@@ -1,40 +1,32 @@
-FROM node:lts-alpine AS base
-
-# Stage 1: Install dependencies
-FROM base AS deps
-RUN apk add --no-cache libc6-compat
+# ---------- Build stage ----------
+FROM node:lts-alpine AS builder
 WORKDIR /app
-COPY package*.json ./
-RUN npm ci
 
-# Stage 2: Build the app
-FROM base AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
+# Install dependencies first (better layer caching)
+COPY package.json ./
+RUN npm install
+
+# Copy source and build
 COPY . .
-RUN npm run build
+RUN rm -rf node_modules/.vite && npm run build
 
-# Stage 3: Run the app
-FROM base AS runner
+# ---------- Runtime stage ----------
+FROM node:lts-alpine AS runtime
 WORKDIR /app
-
 ENV NODE_ENV=production
-ENV HOSTNAME="0.0.0.0"
 
-# Install curl for Coolify health checks and dumb-init for signal handling
-RUN apk add --no-cache curl dumb-init
+# Install dumb-init for signal handling and curl for Coolify health checks
+RUN apk add --no-cache dumb-init curl
 
 RUN addgroup -g 1001 -S nodejs && \
-    adduser -S nextjs -u 1001
+    adduser -S nodejs -u 1001
 
-COPY --from=builder --chown=nextjs:nodejs /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder --chown=nodejs:nodejs /app/.output ./.output
 
-USER nextjs
+USER nodejs
 
 EXPOSE 3000
 
-# Use dumb-init to handle signals properly
+# Use dumb-init to handle signals properly, run node directly
 ENTRYPOINT ["dumb-init", "--"]
-CMD ["node", "server.js"]
+CMD ["node", ".output/server/index.mjs"]
