@@ -1,5 +1,9 @@
 import React from 'react'
-import { HeadContent, Scripts, createRootRouteWithContext } from '@tanstack/react-router'
+import {
+  HeadContent,
+  Scripts,
+  createRootRouteWithContext,
+} from '@tanstack/react-router'
 import type { QueryClient } from '@tanstack/react-query'
 
 import { useDeferredScript } from '@/hooks/use-deferred-script'
@@ -78,7 +82,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
 
-      <body className="min-h-screen max-w-2xl mx-auto flex p-4 md:p-8 font-sans text-foreground">
+      <body className="text-foreground mx-auto flex min-h-screen max-w-2xl p-4 font-sans md:p-8">
         {children}
 
         <Scripts />

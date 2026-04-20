@@ -43,6 +43,18 @@ export const RESUME_V2 = {
   ],
   experiences: [
     {
+      title: 'Frontend Engineer',
+      type: 'Freelance',
+      company: 'Sentra Raya Solusi',
+      link: '#',
+      date: 'Jul 2024 - April 2026',
+      descriptions: [
+        'Built audit trail record dashboards for insurance clients (Tugu Insurance, BSI) to strengthen compliance and monitoring.',
+        'Developed Satu SDM POLRI, a comprehensive HR management system for SDM POLRI.',
+        'Collaborated with client stakeholders to align technical delivery with business governance standards.',
+      ],
+    },
+    {
       title: 'Software Engineer',
       type: 'Fulltime',
       company: 'Travelio',
@@ -63,19 +75,6 @@ export const RESUME_V2 = {
         "Integrated BPJS Kesehatan's E-Klaim service into Hospita.",
         'Maintained application environments, optimizing performance and reliability.',
         'Created and maintained service documentation for integrations and processes.',
-      ],
-    },
-    {
-      title: 'Frontend Engineer',
-      type: 'Freelance',
-      company: 'Sentra Raya Solusi',
-      link: '#',
-      date: 'Jul 2024 - Jul 2025',
-      descriptions: [
-        'Built audit trail record dashboards for insurance clients (Tugu Insurance, BSI) to strengthen compliance and monitoring.',
-        'Developed Satu SDM POLRI, a comprehensive HR management system for SDM POLRI.',
-        'Supported IT operations teams with dashboards for data visibility and incident tracking.',
-        'Collaborated with client stakeholders to align technical delivery with business governance standards.',
       ],
     },
     {
@@ -124,8 +123,7 @@ export const RESUME_V2 = {
     {
       name: 'Madura Tourism Centre',
       link: '',
-      description:
-        'Information page of Madura tourism, history and culture.',
+      description: 'Information page of Madura tourism, history and culture.',
       year: '2022',
       tags: ['React', 'Javascript'],
     },

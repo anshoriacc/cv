@@ -6,7 +6,10 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "node .output/server/index.mjs"
+    "start": "node .output/server/index.mjs",
+    "lint": "eslint",
+    "format": "prettier",
+    "check": "prettier --write . && eslint --fix"
   },
   "dependencies": {
     "@fontsource/poppins": "^5.2.7",
@@ -29,10 +32,14 @@
     "vite-tsconfig-paths": "^5.1.4"
   },
   "devDependencies": {
+    "@tanstack/eslint-config": "^0.3.4",
     "@types/node": "^22.19.17",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.2.0",
+    "@vitejs/plugin-rsc": "^0.5.24",
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "typescript": "^5.9.3",
     "vite": "^7.3.2"
   }
