@@ -82,7 +82,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
 
-      <body className="text-foreground mx-auto flex min-h-screen max-w-2xl p-4 font-sans md:p-8">
+      <body className="text-foreground mx-auto flex min-h-screen max-w-2xl p-4 md:p-8">
         {children}
 
         <Scripts />

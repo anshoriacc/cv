@@ -1,13 +1,8 @@
 @import 'tailwindcss' source(none);
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
-@import '@fontsource/roboto-mono/400.css';
-@import '@fontsource/roboto-mono/500.css';
-@import '@fontsource/roboto-mono/700.css';
-@import '@fontsource/poppins/400.css';
-@import '@fontsource/poppins/500.css';
-@import '@fontsource/poppins/600.css';
-@import '@fontsource/poppins/700.css';
+@import '@fontsource-variable/geist-mono';
+@import '@fontsource-variable/geist';
 
 @source './routes';
 @source './components';
@@ -37,8 +32,8 @@
 }
 
 @theme inline {
-  --font-sans: 'Roboto Mono', monospace;
-  --font-heading: 'Poppins', sans-serif;
+  --font-sans: 'Geist Mono Variable', monospace;
+  --font-heading: 'Geist Variable', sans-serif;
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -68,6 +63,6 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans text-pretty;
   }
 }

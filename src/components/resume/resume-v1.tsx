@@ -126,7 +126,9 @@ export function ResumeV1() {
                   {edu.university}
                 </h3>
 
-                <p className="text-xs whitespace-nowrap">{edu.date}</p>
+                {edu.date ? (
+                  <p className="text-xs whitespace-nowrap">{edu.date}</p>
+                ) : null}
               </div>
 
               <p>{edu.title}</p>

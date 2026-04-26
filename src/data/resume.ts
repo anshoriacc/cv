@@ -1,4 +1,6 @@
-export const RESUME_DATA = {
+import type { ResumeData } from '@/data/type'
+
+export const RESUME_DATA: ResumeData = {
   name: 'Achmad Anshori',
   description:
     "I'm a software engineer with 4 years of experience in software engineering. I craft delightful user experiences with React and modern JavaScript.",
@@ -77,7 +79,7 @@ export const RESUME_DATA = {
     {
       title: 'Bachelor degree in Computer Science',
       university: 'Brawijaya University',
-      date: '2016 - 2023',
+      // date: '2016 - 2023',
     },
   ],
   projects: [
@@ -120,4 +122,4 @@ export const RESUME_DATA = {
       tags: ['React', 'Javascript'],
     },
   ],
-} as const
+}

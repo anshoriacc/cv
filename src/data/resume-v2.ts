@@ -1,4 +1,6 @@
-export const RESUME_V2 = {
+import type { ResumeV2Data } from '@/data/type'
+
+export const RESUME_V2: ResumeV2Data = {
   name: 'Achmad Anshori',
   description:
     'Software Engineer with 4 years of experience delivering reliable technology solutions in various fields such as healthcare, government, and corporate environments. Experienced in collaborating with cross-functional teams to define and implement innovative solutions.',
@@ -128,4 +130,4 @@ export const RESUME_V2 = {
       tags: ['React', 'Javascript'],
     },
   ],
-} as const
+}
