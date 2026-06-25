@@ -34,8 +34,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         links: [
           { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' },
           { rel: 'apple-touch-icon', href: '/white192.png' },
-          { rel: 'preconnect', href: 'https://umami.anshori.com' },
-          { rel: 'dns-prefetch', href: 'https://umami.anshori.com' },
+          { rel: 'preconnect', href: 'https://analytics.anshori.com' },
+          { rel: 'dns-prefetch', href: 'https://analytics.anshori.com' },
           {
             rel: 'stylesheet',
             href: appCss,
@@ -62,6 +62,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               ],
             }),
           },
+          {
+            children:
+              'window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()',
+          },
         ],
       }
     },
@@ -71,9 +75,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   useDeferredScript({
-    src: 'https://umami.anshori.com/script.js',
-    defer: true,
-    'data-website-id': 'db69b964-16b0-47b7-afea-c93be6e6a9cc',
+    src: 'https://analytics.anshori.com/js/pa-YGov_JOkTguXSJVwFq2t8.js',
+    defer: false,
+    async: true,
   })
 
   return (
