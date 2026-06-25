@@ -1,11 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-import { getResumeV2 } from '@/server/resume-rsc'
+import { ResumeV2 } from '@/components/resume/resume-v2'
 
 export const Route = createFileRoute('/(cv)/_layout/v2')({
-  loader: async () => ({
-    Resume: await getResumeV2(),
-  }),
   component: ResumeV2Page,
   head: () => ({
     meta: [
@@ -21,6 +18,5 @@ export const Route = createFileRoute('/(cv)/_layout/v2')({
 })
 
 function ResumeV2Page() {
-  const { Resume } = Route.useLoaderData()
-  return <>{Resume}</>
+  return <ResumeV2 />
 }

@@ -4,7 +4,6 @@ import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import viteTsConfigPaths from 'vite-tsconfig-paths'
 import tailwindcss from '@tailwindcss/vite'
 import { nitro } from 'nitro/vite'
-import rsc from '@vitejs/plugin-rsc'
 
 const config = defineConfig({
   plugins: [
@@ -13,12 +12,7 @@ const config = defineConfig({
       projects: ['./tsconfig.json'],
     }),
     tailwindcss(),
-    tanstackStart({
-      rsc: {
-        enabled: true,
-      },
-    }),
-    rsc(),
+    tanstackStart(),
     viteReact(),
   ],
 })
