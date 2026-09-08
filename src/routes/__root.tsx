@@ -43,6 +43,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         ],
         scripts: [
           {
+            async: true,
+            src: 'https://oa-c.anshori.com/oa.js',
+            'data-key': 'oa_pk_GIDCd93qMSgzPe60W2TlvYfG0zU2qO_H',
+            'data-collector': 'https://oa-c.anshori.com',
+          },
+          {
             children: `
               window.op=window.op||function(){var n=[];return new Proxy(function(){arguments.length&&n.push([].slice.call(arguments))},{get:function(t,r){return"q"===r?n:function(){n.push([r].concat([].slice.call(arguments)))}} ,has:function(t,r){return"q"===r}}) }();
               window.op('init', {
