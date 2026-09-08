@@ -93,6 +93,11 @@ function RootDocument({ children }: { children: React.ReactNode }) {
     defer: true,
     async: true,
   })
+  useDeferredScript({
+    src: 'https://oa-c.anshori.com/oa.js',
+    defer: true,
+    async: true,
+  })
 
   return (
     <html lang="en">
