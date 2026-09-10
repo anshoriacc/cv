@@ -43,12 +43,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         ],
         scripts: [
           {
-            async: true,
-            src: 'https://oa-c.anshori.com/oa.js',
-            'data-key': 'oa_pk_GIDCd93qMSgzPe60W2TlvYfG0zU2qO_H',
-            'data-collector': 'https://oa-c.anshori.com',
-          },
-          {
             children: `
               window.op=window.op||function(){var n=[];return new Proxy(function(){arguments.length&&n.push([].slice.call(arguments))},{get:function(t,r){return"q"===r?n:function(){n.push([r].concat([].slice.call(arguments)))}} ,has:function(t,r){return"q"===r}}) }();
               window.op('init', {
@@ -59,6 +53,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
                 trackAttributes: true,
               });
             `,
+          },
+          {
+            src: 'https://oa-c.anshori.com/oa.js',
+            'data-key': 'oa_pk_7EnXulR-JnpeZwfyR4fc0BzCgqxs9gqr',
+            'data-collector': 'https://oa-c.anshori.com',
+            async: true,
           },
           {
             type: 'application/ld+json',
@@ -90,11 +90,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 function RootDocument({ children }: { children: React.ReactNode }) {
   useDeferredScript({
     src: 'https://openpanel.dev/op1.js',
-    defer: true,
-    async: true,
-  })
-  useDeferredScript({
-    src: 'https://oa-c.anshori.com/oa.js',
     defer: true,
     async: true,
   })
