@@ -6,7 +6,6 @@ import {
 } from '@tanstack/react-router'
 import type { QueryClient } from '@tanstack/react-query'
 
-import { useDeferredScript } from '@/hooks/use-deferred-script'
 import appCss from '../styles.css?url'
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
@@ -43,18 +42,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         ],
         scripts: [
           {
-            children: `
-              window.op=window.op||function(){var n=[];return new Proxy(function(){arguments.length&&n.push([].slice.call(arguments))},{get:function(t,r){return"q"===r?n:function(){n.push([r].concat([].slice.call(arguments)))}} ,has:function(t,r){return"q"===r}}) }();
-              window.op('init', {
-                apiUrl: 'https://analytics.anshori.com/api',
-                clientId: '8f169b98-0364-412b-806f-5c1c56d22709',
-                trackScreenViews: true,
-                trackOutgoingLinks: true,
-                trackAttributes: true,
-              });
-            `,
-          },
-          {
             src: 'https://oa-c.anshori.com/oa.js',
             'data-key': 'oa_pk_jvA_elr1dZ264DnRP4bdlXDrEHJZmw5i',
             'data-collector': 'https://oa-c.anshori.com',
@@ -84,16 +71,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       }
     },
     shellComponent: RootDocument,
+    notFoundComponent: () => <p>Not Found</p>,
   },
 )
 
 function RootDocument({ children }: { children: React.ReactNode }) {
-  useDeferredScript({
-    src: 'https://openpanel.dev/op1.js',
-    defer: true,
-    async: true,
-  })
-
   return (
     <html lang="en">
       <head>
