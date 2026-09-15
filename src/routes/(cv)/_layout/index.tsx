@@ -116,7 +116,7 @@ function ResumePage() {
 
                 <ul className="space-y-0.5">
                   {experience.roles.map((role) => (
-                    <li className="flex items-center gap-4">
+                    <li key={role.position} className="flex items-center gap-4">
                       <span>
                         <span className="text-foreground text-sm font-medium">
                           {role.position}
@@ -206,9 +206,9 @@ function ResumePage() {
                   <span className="hidden print:inline">Stack: </span>
                 )}
 
-                {project.tags.map((tag, tagIndex) => (
+                {project.tags.map((tag) => (
                   <span
-                    key={tagIndex}
+                    key={tag}
                     className={cn(
                       'text-foreground bg-secondary h-fit rounded-md px-2 py-1 text-xs',
                       "print:px-0 print:py-0 print:text-sm print:lowercase print:after:content-[','] print:first:capitalize print:last:before:content-['and_'] print:last:after:content-['.']",
