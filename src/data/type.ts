@@ -4,47 +4,43 @@ export type ResumeSocial = {
 }
 
 export type ResumeExperience = {
-  title: string
-  type: string
   company: string
-  link: string
-  date: string
-  descriptions: string[]
+  companyUrl: string
+  description: string
+  roles: Array<{
+    position: string
+    type: string
+    startDate: string
+    endDate: string | 'Now'
+    responsibilities?: Array<string>
+    technologies?: Array<string>
+  }>
 }
 
 export type ResumeEducation = {
   title: string
   university: string
-  date?: string
+  year?: string
 }
 
 export type ResumeProject = {
   name: string
-  link: string
+  url: string
   description: string
-  tags: string[]
+  tags: Array<string>
   year: string
 }
 
-type ResumeBase<TSkill> = {
+export type ResumeData = {
   name: string
   description: string
   title: string
   location: string
   email: string
   website: { url: string; name: string }
-  social: ResumeSocial[]
-  skills: TSkill[]
-  experiences: ResumeExperience[]
-  education: ResumeEducation[]
-  projects: ResumeProject[]
+  social: Array<ResumeSocial>
+  skills: Array<string>
+  experiences: Array<ResumeExperience>
+  education: Array<ResumeEducation>
+  projects: Array<ResumeProject>
 }
-
-export type ResumeData = ResumeBase<string>
-
-export type ResumeV2Skill = {
-  field: string
-  content: string
-}
-
-export type ResumeV2Data = ResumeBase<ResumeV2Skill>
