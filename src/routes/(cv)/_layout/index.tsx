@@ -17,7 +17,7 @@ function ResumePage() {
         'text-muted-foreground flex flex-col gap-4 text-sm *:text-pretty md:gap-8',
         '[&_section]:flex [&_section]:flex-col [&_section]:gap-2',
         '[&_h1]:text-foreground [&_h1]:text-xl [&_h1]:font-bold sm:[&_h1]:text-2xl',
-        '[&_h2]:text-foreground [&_h2]:font-bold [&_h2]:text-lg',
+        '[&_h2]:text-foreground [&_h2]:text-lg [&_h2]:font-bold',
       )}
     >
       {/* about */}
@@ -27,14 +27,14 @@ function ResumePage() {
         <p className="text-sm">{resumeData.description}</p>
 
         <div className="text-foreground grid gap-2 sm:grid-cols-2">
-          <div className="flex items-center gap-1">
+          <div className="flex w-fit items-center gap-1">
             <IconWorldMap className="size-4" />
             <p>{resumeData.location}</p>
           </div>
 
           <a
             href={`mailto:${resumeData.email}`}
-            className="flex items-center gap-1 underline-offset-4 hover:underline"
+            className="flex w-fit items-center gap-1 underline-offset-4 hover:underline"
           >
             <IconMail className="size-4" />
             <span>{resumeData.email}</span>
@@ -44,7 +44,7 @@ function ResumePage() {
             href={resumeData.website.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 underline-offset-4 hover:underline"
+            className="flex w-fit items-center gap-1 underline-offset-4 hover:underline"
           >
             <IconWorld className="size-4" />
             <span>{resumeData.website.name}</span>
@@ -89,12 +89,12 @@ function ResumePage() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <h3 className="text-foreground font-semibold underline-offset-4 hover:underline text-base">
+                      <h3 className="text-foreground text-base font-semibold underline-offset-4 hover:underline">
                         {experience.company}
                       </h3>
                     </a>
                   ) : (
-                    <h3 className="text-foreground font-semibold text-base">
+                    <h3 className="text-foreground text-base font-semibold">
                       {experience.company}
                     </h3>
                   )}
