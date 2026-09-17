@@ -14,10 +14,10 @@ function ResumePage() {
   return (
     <main
       className={cn(
-        'text-muted-foreground flex flex-col gap-4 text-xs text-pretty md:gap-8',
+        'text-muted-foreground flex flex-col gap-4 text-xs print:text-sm text-pretty md:gap-8',
         '[&_section]:flex [&_section]:flex-col [&_section]:gap-2',
         '[&_h1]:text-foreground [&_h1]:text-xl [&_h1]:font-bold sm:[&_h1]:text-2xl',
-        '[&_h2]:text-foreground [&_h2]:font-bold sm:[&_h2]:text-lg',
+        '[&_h2]:text-foreground [&_h2]:text-base [&_h2]:font-bold sm:[&_h2]:text-lg',
       )}
     >
       {/* about */}
@@ -26,9 +26,9 @@ function ResumePage() {
 
         <p className="text-sm">{resumeData.description}</p>
 
-        <div className="grid gap-2 text-sm sm:grid-cols-2">
+        <div className="grid gap-2 text-sm sm:grid-cols-2 text-foreground">
           <div className="flex items-center gap-1">
-            <IconWorldMap className="size-3.5" />
+            <IconWorldMap className="size-4" />
             <p>{resumeData.location}</p>
           </div>
 
@@ -36,7 +36,7 @@ function ResumePage() {
             href={`mailto:${resumeData.email}`}
             className="flex items-center gap-1 underline-offset-4 hover:underline"
           >
-            <IconMail className="size-3.5" />
+            <IconMail className="size-4" />
             <span>{resumeData.email}</span>
           </a>
 
@@ -46,7 +46,7 @@ function ResumePage() {
             rel="noopener noreferrer"
             className="flex items-center gap-1 underline-offset-4 hover:underline"
           >
-            <IconWorld className="size-3.5" />
+            <IconWorld className="size-4" />
             <span>{resumeData.website.name}</span>
           </a>
         </div>
@@ -82,19 +82,19 @@ function ResumePage() {
             )
             return (
               <li key={experience.company} className="flex flex-col gap-1">
-                <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center justify-between gap-3">
                   {experience.companyUrl ? (
                     <a
                       href={experience.companyUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <h3 className="text-foreground text-base font-semibold underline-offset-4 hover:underline">
+                      <h3 className="text-foreground text-sm font-semibold underline-offset-4 hover:underline sm:text-base">
                         {experience.company}
                       </h3>
                     </a>
                   ) : (
-                    <h3 className="text-foreground text-base font-semibold">
+                    <h3 className="text-foreground text-sm font-semibold sm:text-base">
                       {experience.company}
                     </h3>
                   )}
@@ -120,10 +120,10 @@ function ResumePage() {
                       <span>
                         <span className="text-foreground text-sm font-medium">
                           {role.position}
-                        </span>{' '}
+                        </span>
                         {experience.roles.length > 1 && (
                           <span className="text-xs italic">
-                            {role.startDate} – {role.endDate}
+                            , {role.startDate} – {role.endDate}
                           </span>
                         )}
                       </span>
