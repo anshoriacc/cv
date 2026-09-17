@@ -14,10 +14,10 @@ function ResumePage() {
   return (
     <main
       className={cn(
-        'text-muted-foreground flex flex-col gap-4 text-xs print:text-sm text-pretty md:gap-8',
+        'text-muted-foreground flex flex-col gap-4 text-sm *:text-pretty md:gap-8',
         '[&_section]:flex [&_section]:flex-col [&_section]:gap-2',
         '[&_h1]:text-foreground [&_h1]:text-xl [&_h1]:font-bold sm:[&_h1]:text-2xl',
-        '[&_h2]:text-foreground [&_h2]:text-base [&_h2]:font-bold sm:[&_h2]:text-lg',
+        '[&_h2]:text-foreground [&_h2]:font-bold [&_h2]:text-lg',
       )}
     >
       {/* about */}
@@ -26,7 +26,7 @@ function ResumePage() {
 
         <p className="text-sm">{resumeData.description}</p>
 
-        <div className="grid gap-2 text-sm sm:grid-cols-2 text-foreground">
+        <div className="text-foreground grid gap-2 sm:grid-cols-2">
           <div className="flex items-center gap-1">
             <IconWorldMap className="size-4" />
             <p>{resumeData.location}</p>
@@ -62,7 +62,7 @@ function ResumePage() {
               key={index}
               className={cn(
                 'text-foreground bg-secondary rounded-md px-2 py-1 text-xs',
-                "print:px-0 print:py-0 print:lowercase print:after:content-[','] print:first:capitalize print:last:before:content-['and_'] print:last:after:content-['.']",
+                "print:px-0 print:py-0 print:text-sm print:lowercase print:after:content-[','] print:first:capitalize print:last:before:content-['and_'] print:last:after:content-['.']",
               )}
             >
               {skill}
@@ -82,19 +82,19 @@ function ResumePage() {
             )
             return (
               <li key={experience.company} className="flex flex-col gap-1">
-                <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center justify-between gap-2">
                   {experience.companyUrl ? (
                     <a
                       href={experience.companyUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <h3 className="text-foreground text-sm font-semibold underline-offset-4 hover:underline sm:text-base">
+                      <h3 className="text-foreground font-semibold underline-offset-4 hover:underline text-base">
                         {experience.company}
                       </h3>
                     </a>
                   ) : (
-                    <h3 className="text-foreground text-sm font-semibold sm:text-base">
+                    <h3 className="text-foreground font-semibold text-base">
                       {experience.company}
                     </h3>
                   )}
@@ -118,7 +118,7 @@ function ResumePage() {
                   {experience.roles.map((role) => (
                     <li key={role.position} className="flex items-center gap-4">
                       <span>
-                        <span className="text-foreground text-sm font-medium">
+                        <span className="text-foreground font-medium">
                           {role.position}
                         </span>
                         {experience.roles.length > 1 && (
@@ -188,12 +188,12 @@ function ResumePage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <h3 className="text-foreground text-sm font-semibold underline-offset-4 hover:underline">
+                    <h3 className="text-foreground font-semibold underline-offset-4 hover:underline">
                       {project.name}
                     </h3>
                   </a>
                 ) : (
-                  <h3 className="text-foreground text-sm font-semibold">
+                  <h3 className="text-foreground font-semibold">
                     {project.name}
                   </h3>
                 )}
