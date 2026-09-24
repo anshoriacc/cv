@@ -34,10 +34,9 @@ export const Route = createRootRoute({
       ],
       scripts: [
         {
-          src: 'https://oa-c.anshori.com/oa.js',
-          'data-key': 'oa_pk_LYgrMKQiSqCrS5QCz0RWMWS5h96DJ_u5',
-          'data-collector': 'https://oa-c.anshori.com',
-          async: true,
+          src: 'https://analytics.anshori.com/script.js',
+          'data-website-id': '9aafb460-f5c2-40ae-9449-3fc8321b60b5',
+          defer: true,
         },
       ],
     }
